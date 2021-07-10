@@ -1,14 +1,15 @@
-html,
-body {
-    background-color: black;
+html, body {
+    background-color: rgb(31, 25, 25);
     width: 100%;
     height: 100%;
     color: white;
     overflow: hidden;
+    direction: rtl;
 }
 
 :root {
-    --control-background-color: rgb(28, 36, 36);
+    --control-background-color: rgb(59, 61, 61);
+    --border-color: #8b8a8a;
 }
 
 .page {
@@ -23,7 +24,6 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    direction: rtl;
 }
 
 .intro {
@@ -39,44 +39,66 @@ body {
 }
 
 .please {
-    font-size: 28px;
+    font-size: 36px;
 }
 
 .msg {
     width: 250px;
     height: 40px;
-    padding: 4px 12px;
-    border: white solid 1px;
-    border-radius: 20px;
+    padding: 0 12px;
+    border: var(--border-color) solid 1px;
+    border-radius: 4px;
     text-align: start;
     background-color: var(--control-background-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.why-button,
-.back-button {
+.send-icon {
+    margin-inline-start: 8px;
+    font-size: 20px;
+}
+
+.daylahay-button {
     background-color: var(--control-background-color);
     width: 100px;
     align-self: center;
-    border: white solid 1px;
-    border-radius: 8px;
+    border: var(--border-color) solid 1px;
+    border-radius: 4px;
+    margin: auto;
     margin-bottom: 80px;
-    direction: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    min-height: 36px;
 }
 
-.why-button:hover,
-.back-button:hover {
+.daylahay-button .material-icons {
+    margin: 0 6px;
+    font-size: 20px;
+}
+
+.button-label{
+    flex: 1;
+    text-align: start;
+    margin: 0 6px;
+    height: 18px;
+    line-height: 14px;
+}
+
+.daylahay-button:hover {
     background-color: rgb(66, 65, 65);
 }
 
-.why-button:active,
-.back-button:active {
+.daylahay-button:active {
     background-color: lightgrey;
     color: black;
 }
 
 .hide {
     transform: translateY(-110%);
-    transition: 400ms transform ease-in-out;
+    transition: 600ms transform ease-in-out;
 }
 
 .why-box {
@@ -89,13 +111,18 @@ body {
     text-align: center;
 }
 
+.show {
+    transform: translateY(0px);
+    transition: 600ms transform ease-in-out;
+}
+
 .why-border {
     height: 90%;
     max-height: 90%;
     max-width: 100%;
     overflow: hidden;
-    padding: 4px 2px;
-    border: solid white 1px;
+    padding: 6px 2px;
+    border: solid var(--border-color) 1px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -108,10 +135,11 @@ body {
     padding: 20px;
     scrollbar-width: thin;
     text-align: start;
+    direction: ltr;
 }
 
 .why-text::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 
 .why-text::-webkit-scrollbar-track {
@@ -120,13 +148,8 @@ body {
 
 .why-text::-webkit-scrollbar-thumb {
     background-color: darkgrey;
-    outline: 1px solid slategrey;
+    /* outline: 1px solid slategrey; */
     border-radius: 8px;
-}
-
-.show {
-    transform: translateY(0px);
-    transition: 400ms transform ease-in-out;
 }
 
 code {
@@ -159,5 +182,7 @@ ul.task-list {
 .typewrite {
     color: white;
     /* text-decoration: line-through; */
-    text-decoration-thickness: 4px
+    text-decoration-thickness: 4px;
+    height: 18px;
+    line-height: 14px;
 }
