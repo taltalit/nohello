@@ -1,4 +1,4 @@
-const TxtType = function(el, toRotate, period) {
+const TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -8,7 +8,8 @@ const TxtType = function(el, toRotate, period) {
     this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function() {
+
+TxtType.prototype.tick = function () {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
 
@@ -23,7 +24,9 @@ TxtType.prototype.tick = function() {
     var that = this;
     var delta = 200 - Math.random() * 100;
 
-    if (this.isDeleting) { delta /= 2; }
+    if (this.isDeleting) {
+        delta /= 2;
+    }
 
     if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
@@ -31,15 +34,15 @@ TxtType.prototype.tick = function() {
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 900;
+        delta = 500;
     }
 
-    setTimeout(function() {
+    setTimeout(function () {
         that.tick();
     }, delta);
 };
 
-window.onload = function() {
+window.onload = function () {
     const elements = document.getElementsByClassName('typewrite');
     for (let i = 0; i < elements.length; i++) {
         const toRotate = elements[i].getAttribute('data-type');
@@ -51,27 +54,20 @@ window.onload = function() {
 
     const introBox = document.getElementById('introBox');
     const whyBox = document.getElementById('whyBox');
-    const whyButton = document.getElementById('whyButton');
-    whyButton.addEventListener('click', () => {
-        console.log('click');
-        introBox.classList.add('hide');
-        introBox.classList.remove('show');
-        whyBox.classList.add('show');
-        whyBox.classList.remove('hide');
-
-    })
 
     const backButton = document.getElementById('backButton');
     backButton.addEventListener('click', () => {
-            whyBox.classList.add('hide');
-            whyBox.classList.remove('show');
+        // whyBox.classList.add('hide');
+        // whyBox.classList.remove('show');
 
-            introBox.classList.add('show');
-            introBox.classList.remove('hide');
-        })
-        // INJECT CSS
-        // var css = document.createElement("style");
-        // css.type = "text/css";
-        // // css.innerHTML = ".typewrite > .wrap { border-left: 0.08em solid #000}";
-        // document.body.appendChild(css);
+        // introBox.classList.add('show');
+        // introBox.classList.remove('hide');
+        ssg.scrollUp();
+
+    })
+    // INJECT CSS
+    // var css = document.createElement("style");
+    // css.type = "text/css";
+    // // css.innerHTML = ".typewrite > .wrap { border-left: 0.08em solid #000}";
+    // document.body.appendChild(css);
 };

@@ -152,7 +152,6 @@ dfn {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
 }
 
 
@@ -512,7 +511,7 @@ body {
     font-size: 12pt;
     line-height: 1.6;
     margin: auto;
-    max-width: 920px;
+    max-width: 1220px;
     min-width: 360px;
     padding: 2rem;
     word-wrap: break-word;
@@ -531,7 +530,7 @@ h6 {
     font-weight: 600;
     line-height: 1.25;
     margin-bottom: 16px;
-    margin-top: 24px;
+    margin-top: 15px;
 }
 
 h1 {
