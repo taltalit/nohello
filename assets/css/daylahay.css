@@ -1,0 +1,312 @@
+html, body {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    direction: rtl;
+}
+
+:root {
+    --control-background-color: rgb(59, 61, 61);
+    --border-color: #8b8a8a;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.intro-box {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.please {
+    font-size: 36px;
+}
+
+.msg {
+    width: 250px;
+    height: 40px;
+    padding: 0 12px;
+    border: var(--border-color) solid 1px;
+    border-radius: 4px;
+    text-align: start;
+    background-color: var(--control-background-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.send-icon {
+    margin-inline-start: 8px;
+    font-size: 20px;
+}
+
+.daylahay-button {
+    background-color: var(--control-background-color);
+    /* width: 100px; */
+    align-self: center;
+    border: var(--border-color) solid 1px;
+    border-radius: 4px;
+    margin: auto auto 80px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    min-height: 36px;
+}
+
+.daylahay-button .material-icons {
+    margin: 0 6px;
+    font-size: 20px;
+}
+
+.button-label {
+    flex: 1;
+    text-align: start;
+    margin: 0 6px;
+    height: 18px;
+    line-height: 14px;
+}
+ a,a:hover{
+   background-color: initial;
+     text-decoration: inherit;
+     color:#fff;
+ }
+  .daylahay-button:hover{
+    background-color: rgb(66, 65, 65);
+}
+
+.daylahay-button:active {
+    background-color: lightgrey;
+    color: black;
+}
+
+.hide {
+    transform: translateY(-110%);
+    transition: 600ms transform ease-in-out;
+}
+
+.why-box {
+    /* position: absolute; */
+    /* transform: translateY(110%); */
+    margin: 20px auto;
+    /* height: 100%; */
+    max-height: 100%;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.show {
+    transform: translateY(0px);
+    transition: 600ms transform ease-in-out;
+}
+
+.why-border {
+    height: 90%;
+    max-height: 90%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 6px 2px;
+    border: solid var(--border-color) 1px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.why-text {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0 20px;
+    text-align: start;
+    direction: rtl;
+
+}
+
+.why-text:hover {
+    scrollbar-color: #5749d2;
+
+}
+
+.dont-wrapper {
+    display: flex;
+}
+
+.slack-area {
+    padding: 25px 25px 10px 25px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    width: 100%;
+    margin-inline-end: 50px;
+    height:100%;
+}
+
+.slack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    margin-bottom:  20px;
+}
+
+.slackimg {
+    width: 50px;
+    height: 50px;
+}
+
+.slack .slackname {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1d1c1d;
+}
+
+.slack .slacktime {
+    font-size: 14px;
+    color: #616061;
+
+}
+
+.slack .slackmessage {
+    font-size: 16px;
+    color: #1d1c1d;
+}
+
+ul {
+    list-style: none;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 24px;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    opacity: 70%;
+}
+
+ul.nonos li:before {
+    content: '×';
+    color: red;
+    font-weight: bold;
+    padding-left: 10px;
+    opacity: 100% !important;
+}
+
+ul.muchbetter li:before {
+    content: '✓';
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+    padding-left: 10px;
+    opacity: 100% !important;
+}
+.footer{
+    font-size:smaller;
+}
+.footer a{
+    text-decoration-line: underline;
+}
+/*.sections {*/
+/*    !*display: flex;*!*/
+/*}*/
+
+/*.section{*/
+
+/*}*/
+
+/*code {*/
+/*    white-space: pre-wrap;*/
+/*}*/
+
+/*span.smallcaps {*/
+/*    font-variant: small-caps;*/
+/*}*/
+
+/*span.underline {*/
+/*    !* text-decoration: underline; *!*/
+/*}*/
+
+/*div.column {*/
+/*    display: inline-block;*/
+/*    vertical-align: top;*/
+/*    width: 50%;*/
+/*}*/
+
+/*div.hanging-indent {*/
+/*    margin-left: 1.5em;*/
+/*    text-indent: -1.5em;*/
+/*}*/
+
+/*ul.task-list {*/
+/*    list-style: none;*/
+/*}*/
+
+/*.typewrite {*/
+/*    color: white;*/
+/*    !* text-decoration: line-through; *!*/
+/*    text-decoration-thickness: 4px;*/
+/*    height: 18px;*/
+/*    line-height: 14px;*/
+/*}*/
+
+/*.list-card.example {*/
+/*    padding: 25px 25px 10px 25px;*/
+/*    border-radius: 10px;*/
+/*    background-color: var(--control-background-color);*/
+/*}*/
+
+
+/*.slack {*/
+/*    padding-bottom: 15px;*/
+/*}*/
+
+
+/*.cards {*/
+/*    max-width: 1120px;*/
+/*    display: block;*/
+/*    margin-top: 80px;*/
+/*}*/
+
+/*.card {*/
+/*    width: 47.9%;*/
+/*    height: 200px;*/
+/*    background-color: #eef0f7;*/
+/*    display: inline-block;*/
+/*    margin: 7px 5px;*/
+/*    vertical-align: top;*/
+/*    border-radius: 10px;*/
+/*    text-align: center;*/
+/*    padding-top: 50px;*/
+/*}*/
+
+/*.card-active,*/
+/*.card:hover {*/
+/*    transform: scale(1.02);*/
+/*    transition: 0.5s;*/
+/*    background-color: #fff;*/
+/*    box-shadow: 0px 5px 50px -8px #ddd;*/
+/*    cursor: pointer;*/
+/*}*/
