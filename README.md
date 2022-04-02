@@ -2,18 +2,6 @@
 
 This is the source of [this](https://sbmueller.github.io/nohello/) website.
 
-## Build
-
-There is a Github Action in place to deploy any changes to `index.md` to the
-`index.html` site when pushing to `master` branch.
-
-To generate the HTML file from Markdown manually,
-[pandoc](https://github.com/jgm/pandoc) is used:
-
-```
-pandoc --standalone --metadata pagetitle="nohello" --css "assets/css/pandoc.css" --output=index.html index.md
-```
-
 ## Acknowledgements
 
 This website was inspired by the original at
