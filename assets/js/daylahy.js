@@ -51,23 +51,4 @@ window.onload = function () {
             new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-
-    const introBox = document.getElementById('introBox');
-    const whyBox = document.getElementById('whyBox');
-
-    const backButton = document.getElementById('backButton');
-    backButton.addEventListener('click', () => {
-        // whyBox.classList.add('hide');
-        // whyBox.classList.remove('show');
-
-        // introBox.classList.add('show');
-        // introBox.classList.remove('hide');
-        ssg.scrollUp();
-
-    })
-    // INJECT CSS
-    // var css = document.createElement("style");
-    // css.type = "text/css";
-    // // css.innerHTML = ".typewrite > .wrap { border-left: 0.08em solid #000}";
-    // document.body.appendChild(css);
 };
